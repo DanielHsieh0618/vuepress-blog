@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: https://vuepress.vuejs.org/hero.png
-heroText: Issue
+heroText: Daniel Hsieh' blog
 tagline: a blog about tech skills and life journals
 actionText: Enter →
 actionLink: /guides/

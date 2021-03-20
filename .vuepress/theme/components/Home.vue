@@ -18,7 +18,7 @@
         {{ data.tagline || $description || "Welcome to your VuePress site" }}
       </p>
 
-      <Carousel></Carousel>
+      <Carousel v-if="false"></Carousel>
 
       <p v-if="data.actionText && data.actionLink" class="action">
         <NavLink class="action-button" :item="actionLink" />

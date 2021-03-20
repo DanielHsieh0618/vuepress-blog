@@ -4,7 +4,7 @@ heroImage: https://vuepress.vuejs.org/hero.png
 heroText: Daniel Hsieh' blog
 tagline: a blog about tech skills and life journals
 actionText: Enter →
-actionLink: /guides/
+actionLink: /posts/
 features:
 - title: tech skills
   details: Minimal setup with markdown-centered project structure helps you focus on writing.

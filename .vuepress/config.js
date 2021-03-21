@@ -3,8 +3,9 @@ module.exports = {
   description: `A simple VuePress project deployed with github.`,
   themeConfig: {
     nav: [
-      { text: 'Blog', link: '/posts/' },
-      { text: 'Guide', link: '/guides/' },
+      { text: '部落格', link: '/posts/' },
+      // { text: 'Guide', link: '/guides/' },
+      { text: '作品集', link: '/portfolios/' },
     ],
     sidebar: [
       // {

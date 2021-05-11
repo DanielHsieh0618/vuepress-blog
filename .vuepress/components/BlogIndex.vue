@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div v-for="post in posts">
+    <div v-for="(post, index) in posts" :key="index+'-post'">
       <h2>
         <router-link :to="post.path">{{ post.frontmatter.title }}</router-link>
       </h2>
-      <div class="tags">
-        <span class="tag" v-for="tag in post.frontmatter.tags">{{ tag }}</span>
+      <div class="tags mb-3">
+        <v-chip small color='primary' v-for="(tag, index) in post.frontmatter.tags" :key="index+'-tag'">{{ tag }}</v-chip>
       </div>
 
       <p>{{ post.frontmatter.description }}</p>
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style scoped>
-.article {
+/* .article {
   margin-bottom: 20px;
   border-left: solid 5px #3eaf7c;
   padding: 20px;
@@ -50,5 +50,5 @@ export default {
   margin-right: 5px;
   color: white;
   font-weight: 500;
-}
+} */
 </style>

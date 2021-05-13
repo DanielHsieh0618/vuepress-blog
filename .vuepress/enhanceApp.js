@@ -1,4 +1,4 @@
-import Vuetify from 'vuetify'
+import Vuetify from 'vuetify'  ///lib
 import 'vuetify/dist/vuetify.min.css'
 
 export default ({
@@ -8,5 +8,11 @@ export default ({
     siteData,  // site metadata
 }) => {
     Vue.use(Vuetify)
-    options.vuetify = new Vuetify({})
+    options.vuetify = new Vuetify({
+        theme: {
+            options: {
+                customProperties: true
+            }
+        }
+    })
 }

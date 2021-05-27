@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card :to="post.path" v-for="(post, index) in posts" :key="index+'-post'" class=“mb-3”>
+    <v-card :to="post.path" v-for="(post, index) in posts" :key="index+'-post'" class="mb-3">
       <v-card-title>
         {{ post.frontmatter.title }}
         <v-spacer></v-spacer>

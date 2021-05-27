@@ -15,7 +15,6 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '部落格', link: '/posts/' },
-      // { text: 'Guide', link: '/guides/' },
       { text: '作品集', link: '/portfolios/' },
     ],
     sidebar: [

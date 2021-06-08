@@ -1,46 +1,50 @@
 <template>
-  <main
-    class="home"
-    :aria-labelledby="data.heroText !== null ? 'main-title' : null"
-  >
-    <header class="hero">
-      <img
-        v-if="data.heroImage"
-        :src="$withBase(data.heroImage)"
-        :alt="data.heroAlt || 'hero'"
-      />
+  <v-app>
+    <main
+      class="home"
+      :aria-labelledby="data.heroText !== null ? 'main-title' : null"
+    >
+      <header class="hero">
+        <img
+          v-if="data.heroImage"
+          :src="$withBase(data.heroImage)"
+          :alt="data.heroAlt || 'hero'"
+        />
 
-      <h1 v-if="data.heroText !== null" id="main-title">
-        {{ data.heroText || $title || "Hello" }}
-      </h1>
+        <h1 v-if="data.heroText !== null" id="main-title">
+          {{ data.heroText || $title || "Hello" }}
+        </h1>
 
-      <p v-if="data.tagline !== null" class="description">
-        {{ data.tagline || $description || "Welcome to your VuePress site" }}
-      </p>
+        <p v-if="data.tagline !== null" class="description">
+          {{ data.tagline || $description || "Welcome to your VuePress site" }}
+        </p>
+        <Carousel v-if="false"></Carousel>
 
-      <Carousel v-if="false"></Carousel>
-
-      <p v-if="data.actionText && data.actionLink" class="action">
-        <NavLink class="action-button" :item="actionLink" />
-      </p>
-    </header>
-    <div v-if="data.features && data.features.length" class="features">
-      <div
-        v-for="(feature, index) in data.features"
-        :key="index"
-        class="feature"
-      >
-        <h2>{{ feature.title }}</h2>
-        <p>{{ feature.details }}</p>
+        <p v-if="data.actionText && data.actionLink" class="action">
+          <!-- <NavLink class="action-button" :item="actionLink" /> -->
+          <v-btn depressed color="primary" :to="actionLink.link">
+            {{actionLink.text}}
+          </v-btn>
+        </p>
+      </header>
+      <div v-if="data.features && data.features.length" class="features">
+        <div
+          v-for="(feature, index) in data.features"
+          :key="index"
+          class="feature"
+        >
+          <h2>{{ feature.title }}</h2>
+          <p>{{ feature.details }}</p>
+        </div>
       </div>
-    </div>
 
-    <Content class="theme-default-content custom" />
+      <Content class="theme-default-content custom" />
 
-    <div v-if="data.footer" class="footer">
-      {{ data.footer }}
-    </div>
-  </main>
+      <div v-if="data.footer" class="footer">
+        {{ data.footer }}
+      </div>
+    </main>
+  </v-app>
 </template>
 
 <script>

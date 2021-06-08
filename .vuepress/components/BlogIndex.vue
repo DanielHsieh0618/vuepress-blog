@@ -1,19 +1,19 @@
 <template>
   <div>
-    <div v-for="post in posts">
-      <h2>
-        <router-link :to="post.path">{{ post.frontmatter.title }}</router-link>
-      </h2>
-      <div class="tags">
-        <span class="tag" v-for="tag in post.frontmatter.tags">{{ tag }}</span>
-      </div>
+    <v-card :to="post.path" v-for="(post, index) in posts" :key="index+'-post'" class="mb-3">
+      <v-card-title>
+        {{ post.frontmatter.title }}
+        <v-spacer></v-spacer>
+      </v-card-title>
+      <v-divider></v-divider>
+      <v-card-text>
+        <div class="tags">
+          <v-chip small color='primary' v-for="(tag, index) in post.frontmatter.tags" :key="index+'-tag'" class='mb-2 mr-2'>{{ tag }}</v-chip>
+        </div>
 
-      <p>{{ post.frontmatter.description }}</p>
-
-      <p>
-        <router-link :to="post.path">瀏覽細節⋯⋯⋯⋯</router-link>
-      </p>
-    </div>
+        <p>{{ post.frontmatter.description }}</p>
+      </v-card-text>
+    </v-card>
   </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style scoped>
-.article {
+/* .article {
   margin-bottom: 20px;
   border-left: solid 5px #3eaf7c;
   padding: 20px;
@@ -50,5 +50,5 @@ export default {
   margin-right: 5px;
   color: white;
   font-weight: 500;
-}
+} */
 </style>

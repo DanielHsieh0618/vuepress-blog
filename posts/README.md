@@ -2,11 +2,7 @@
 blog_index: true
 ---
 
-# index
-
-this is index
-
-<!-- <Carousel></Carousel> -->
+# 文章列表
 
 
 <BlogIndex></BlogIndex>

@@ -1,6 +1,6 @@
 module.exports = {
-  title: "Daniel Hsieh' blog",
-  description: `A simple VuePress project deployed with github.`,
+  title: "技術宅日常",
+  description: `一些關於網頁開發技術記事`,
   head: [
     ['link', { rel: 'icon', href: '/icon-192x192.png' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -14,8 +14,7 @@ module.exports = {
   ],
   themeConfig: {
     nav: [
-      { text: '部落格', link: '/posts/' },
-      { text: '作品集', link: '/portfolios/' },
+      { text: '個人作品集', link: '/portfolios/' },
     ],
     sidebar: [
       // {
@@ -28,7 +27,7 @@ module.exports = {
       //   ]
       // },
       {
-        title: 'Blog',   // required
+        title: '文章列表',   // required
         path: '/posts/',      // optional, link of the title, which should be an absolute path and must exist
         //collapsable: true, // optional, defaults to true
         //sidebarDepth: 1,    // optional, defaults to 1

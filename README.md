@@ -1,15 +1,15 @@
 ---
 home: true
 # heroImage: https://vuepress.vuejs.org/hero.png
-heroText: Daniel Hsieh' blog
-tagline: a blog about tech skills and life journals
-actionText: Enter →
+heroText: 技術宅日常
+tagline: 技術筆記與開發雜記
+actionText: 文章列表
 actionLink: /posts/
 features:
-- title: tech skills
-  details: Minimal setup with markdown-centered project structure helps you focus on writing.
-- title: life journals
-  details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
+- title: 技術筆記
+  details: 主力於前端技術開發，希望再慢慢拓展自己的技能樹。
+- title: 開發雜記
+  details: 一些開發上的想法與心得發想
 # - title: Performant
 #   details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
 footer: MIT Licensed | Copyright © 2018-present Daniel Hsieh

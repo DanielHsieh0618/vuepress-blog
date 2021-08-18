@@ -1,5 +1,6 @@
 import Vuetify from 'vuetify'  ///lib
 import 'vuetify/dist/vuetify.min.css'
+import '@mdi/font/css/materialdesignicons.css'
 
 export default ({
     Vue,      // the version of Vue being used in the VuePress app
@@ -9,6 +10,9 @@ export default ({
 }) => {
     Vue.use(Vuetify)
     options.vuetify = new Vuetify({
+        icons: {
+            iconfont: 'mdi', // default - only for display purposes
+        },
         theme: {
             options: {
                 customProperties: true

@@ -18,7 +18,9 @@ meta:
   - clientHeight < scrollHeight
   - clientWidth < scrollWidth
 - 控制tooltip的參數
-- mouseover, mouseenter, or mouseleave
+- 事件
+  - mouseover, mouseout
+  - mouseenter, mouseleave
 
 <TextTruncated/>
 
